@@ -1,11 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { provide, ref } from 'vue'
+import ToDoList from './components/ToDoList.vue'
+import AddItem from './components/AddItem.vue'
+const items = ref([
+  { id: 1, text: 'Learn Vue.js' },
+  { id: 2, text: 'Build a to-do app' },
+  { id: 3, text: 'Master TypeScript' },
+])
+provide('items', items)
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <AddItem />
+  <ToDoList />
 </template>
 
 <style scoped></style>
