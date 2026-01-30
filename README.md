@@ -1,6 +1,16 @@
 # ToDo List ++
 
-## This project aims to build on the idea of a todo List and make it into a Jira lite idea.
+## This project aims to build on the idea of a todo List and make it into a Jira lite idea
+
+## Things to Do
+
+- Connect to `localStorage` to persist the todo list
+- Add a **Save** button
+- Add a **List Name** field
+- Add a **Priority Level** option
+- Add **Date of Creation**
+- Add an **Editable Description**
+- Add **Item Status** (e.g., pending, in‑progress, completed)
 
 ## Recommended IDE Setup
 
