@@ -9,7 +9,6 @@ const items = ref([
   { id: 3, text: 'Master TypeScript' },
 ])
 onMounted(() => {
-  console.log(localStorage.getItem('todo-items'))
   items.value = JSON.parse(localStorage.getItem('todo-items') || '[]')
 })
 

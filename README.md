@@ -4,8 +4,8 @@
 
 ## Things to Do
 
-- Connect to `localStorage` to persist the todo list
-- Add a **Save** button
+- ~~Connect to `localStorage` to persist the todo list~~
+- ~~Add a **Save** button~~
 - Add a **List Name** field
 - Add a **Priority Level** option
 - Add **Date of Creation**
