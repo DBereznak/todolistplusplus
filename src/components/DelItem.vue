@@ -2,7 +2,7 @@
 defineProps<{
   id: number
 }>()
-import { ref, inject, type Ref } from 'vue'
+import { inject, type Ref } from 'vue'
 const items = inject('items') as Ref<Array<{ id: number; text: string }>>
 
 const delItem = (id: number) => {

@@ -2,6 +2,7 @@
 import { inject, type Ref } from 'vue'
 import ListItem from './ListItem.vue'
 const items = inject('items') as Ref<Array<{ id: number; text: string }>>
+console.log('ToDoList items:', items.value)
 </script>
 <template>
   <div class="todo-list">

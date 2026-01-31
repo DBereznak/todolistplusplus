@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
 import DelItem from './DelItem.vue'
 defineProps<{
   id: number
