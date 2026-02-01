@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { inject, type Ref } from 'vue'
 import ListItem from './ListItem.vue'
-const items = inject('items') as Ref<Array<{ id: number; text: string }>>
+import type { List } from '@/types'
+const items = inject('items') as Ref<Array<List>>
 console.log('ToDoList items:', items.value)
 </script>
 <template>
@@ -9,9 +10,12 @@ console.log('ToDoList items:', items.value)
     <h1>My To-Do List</h1>
     <ul>
       <ListItem v-for="item in items" :key="item.id" :id="item.id">
-        {{ item.text }} {{ item.id }}
+        <div>
+          {{ item.text }}
+        </div>
+        <div>Created On : {{ item.createdOn }}</div>
+        <div>Status: {{ item.status }}</div>
       </ListItem>
     </ul>
   </div>
 </template>
-00

@@ -1,11 +1,19 @@
 <script lang="ts" setup>
 import { ref, inject, type Ref } from 'vue'
-const items = inject('items') as Ref<Array<{ id: number; text: string }>>
+import type { List } from '@/types'
+import { Status } from '@/types'
+const items = inject('items') as Ref<Array<List>>
 const newItemText = ref('')
 const addItem = () => {
+  const date = new Date().toLocaleDateString()
   if (newItemText.value.trim() !== '') {
     const newId = items.value.length ? Math.max(...items.value.map((item) => item.id)) + 1 : 1
-    items.value.push({ id: newId, text: newItemText.value.trim() })
+    items.value.push({
+      id: newId,
+      text: newItemText.value.trim(),
+      createdOn: date,
+      status: Status.Pending,
+    })
     newItemText.value = ''
   } else {
     alert('Item text cannot be empty.')
