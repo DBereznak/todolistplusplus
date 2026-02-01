@@ -1,9 +1,10 @@
 <script lang="ts" setup>
+import type { List } from '@/types'
 defineProps<{
   id: number
 }>()
 import { inject, type Ref } from 'vue'
-const items = inject('items') as Ref<Array<{ id: number; text: string }>>
+const items = inject('items') as Ref<Array<List>>
 
 const delItem = (id: number) => {
   const i = items.value.findIndex((item) => item.id === id)

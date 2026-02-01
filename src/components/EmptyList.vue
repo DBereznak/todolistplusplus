@@ -5,6 +5,4 @@
   </div>
 </template>
 
-<stye scoped>
-
-</stye>
+<style scoped></style>

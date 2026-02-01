@@ -14,12 +14,23 @@ provide('items', items)
 </script>
 
 <template>
-  <AddItem />
-  <EmptyList v-if="items.length === 0" />
-  <div v-else>
-    <ToDoList />
-    <SaveButton />
-  </div>
+  <section class="main-section">
+    <AddItem />
+    <EmptyList v-if="items.length === 0" />
+    <div v-else>
+      <ToDoList />
+      <SaveButton />
+    </div>
+  </section>
 </template>
-
-<style scoped></style>
+.
+<style scoped>
+.main-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+</style>

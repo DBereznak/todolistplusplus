@@ -8,9 +8,11 @@
 - ~~Add a **Save** button~~
 - Add a **List Name** field
 - Add a **Priority Level** option
-- Add **Date of Creation**
+  ~~- Add **Date of Creation**~~
 - Add an **Editable Description**
-- Add **Item Status** (e.g., pending, in‑progress, completed)
+  ~~- Add **Item Status** (e.g., pending, in‑progress, completed)~~
+- Add sorting
+- sort completed items to bottom of list
 
 ## Recommended IDE Setup
 
