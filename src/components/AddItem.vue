@@ -4,6 +4,7 @@ import type { List } from '@/types'
 import { Priority, Status } from '@/types'
 const items = inject('items') as Ref<Array<List>>
 const newItemText = ref('')
+const newDescriptionText = ref('')
 const addItem = () => {
   const date = new Date().toLocaleDateString()
   if (newItemText.value.trim() !== '') {
@@ -14,6 +15,7 @@ const addItem = () => {
       createdOn: date,
       status: Status.Pending,
       priority: Priority.Normal,
+      description: newDescriptionText.value.trim(),
     })
     newItemText.value = ''
   } else {
@@ -27,6 +29,14 @@ const addItem = () => {
   <div>
     <h2>Add New Item</h2>
     <input type="text" placeholder="New item" v-model="newItemText" />
+    <br />
+    <br />
+    <textarea
+      v-model="newDescriptionText"
+      placeholder="Add notes or a description here if you want."
+    ></textarea>
+    <br />
+
     <button @click="addItem()">Add</button>
   </div>
 </template>

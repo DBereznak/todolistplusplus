@@ -4,6 +4,7 @@ export type List = {
   createdOn: string
   status: Status
   priority: Priority
+  description?: string
 }
 
 export enum Status {

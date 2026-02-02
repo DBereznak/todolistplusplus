@@ -9,7 +9,7 @@
 - Add a **List Name** field
   ~~- Add a **Priority Level** option~~
   ~~- Add **Date of Creation**~~
-- Add an **Editable Description**
+- Add an **Editable Description** // added description will make it editable later
   ~~- Add **Item Status** (e.g., pending, in‑progress, completed)~~
 - Add sorting
 - sort completed items to bottom of list
