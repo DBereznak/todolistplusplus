@@ -17,7 +17,7 @@ const updateStatus = () => {
 </script>
 
 <template>
-  <select v-model="status" @change="updateStatus(id)">
+  <select v-model="status" @change="updateStatus()">
     <option value="pending">Pending</option>
     <option value="in-progress">In Progress</option>
     <option value="completed">Completed</option>

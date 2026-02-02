@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref, inject, type Ref } from 'vue'
 import type { List } from '@/types'
-import { Status } from '@/types'
+import { Priority, Status } from '@/types'
 const items = inject('items') as Ref<Array<List>>
 const newItemText = ref('')
 const addItem = () => {
@@ -13,6 +13,7 @@ const addItem = () => {
       text: newItemText.value.trim(),
       createdOn: date,
       status: Status.Pending,
+      priority: Priority.Normal,
     })
     newItemText.value = ''
   } else {

@@ -15,6 +15,7 @@ console.log('ToDoList items:', items.value)
         </div>
         <div>Created On : {{ item.createdOn }}</div>
         <div>Status: {{ item.status }}</div>
+        <div>Priority: {{ item.priority }}</div>
       </ListItem>
     </ul>
   </div>

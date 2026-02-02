@@ -7,7 +7,7 @@
 - ~~Connect to `localStorage` to persist the todo list~~
 - ~~Add a **Save** button~~
 - Add a **List Name** field
-- Add a **Priority Level** option
+  ~~- Add a **Priority Level** option~~
   ~~- Add **Date of Creation**~~
 - Add an **Editable Description**
   ~~- Add **Item Status** (e.g., pending, in‑progress, completed)~~

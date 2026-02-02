@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import DelItem from './DelItem.vue'
 import StatusDropDown from './StatusDropDown.vue'
+import PriorityDropDown from './PriorityDropDown.vue'
 defineProps<{
   id: number
 }>()
@@ -11,5 +12,6 @@ defineProps<{
     <slot></slot>
     <del-item :id="id" />
     <status-drop-down :id="id" />
+    <priority-drop-down :id="id" />
   </li>
 </template>
