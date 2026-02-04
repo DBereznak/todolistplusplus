@@ -3,11 +3,11 @@ import { inject, type Ref } from 'vue'
 import ListItem from './ListItem.vue'
 import type { List } from '@/types'
 const items = inject('items') as Ref<Array<List>>
-console.log('ToDoList items:', items.value)
+const name = inject('name') as Ref<string>
 </script>
 <template>
   <div class="todo-list">
-    <h1>My To-Do List</h1>
+    <h1>{{ name }}</h1>
     <ul>
       <ListItem v-for="item in items" :key="item.id" :id="item.id">
         <div>

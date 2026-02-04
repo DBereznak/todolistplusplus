@@ -6,13 +6,18 @@
 
 - ~~Connect to `localStorage` to persist the todo list~~
 - ~~Add a **Save** button~~
-- Add a **List Name** field
+- ~~Add a **List Name** field~~
 - ~~- Add a **Priority Level** option~~
 - ~~- Add **Date of Creation**~~
 - ~~Add an **Editable Description** // added description will make it editable later~~
 - ~~- Add **Item Status** (e.g., pending, in‑progress, completed)~~
 - Add sorting
 - sort completed items to bottom of list
+
+## dependancies
+
+- font: 'Inter', 'Proza Libre' (<https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap>)
+- icons: Lucide (<https://lucide.dev/>)
 
 ## Recommended IDE Setup
 

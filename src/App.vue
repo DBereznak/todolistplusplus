@@ -4,13 +4,17 @@ import ToDoList from './components/ToDoList.vue'
 import AddItem from './components/AddItem.vue'
 import SaveButton from './components/SaveButton.vue'
 import EmptyList from './components/EmptyList.vue'
+import ListName from './components/ListName.vue'
 const items = ref([])
+const name = ref('')
 
 onMounted(() => {
   items.value = JSON.parse(localStorage.getItem('todo-items') || '[]')
+  name.value = JSON.parse(localStorage.getItem('list-name') || '{"listName":""}').name || ''
 })
 
 provide('items', items)
+provide('name', name)
 </script>
 
 <template>
@@ -18,6 +22,7 @@ provide('items', items)
     <h1>ToDo List ++</h1>
   </header>
   <section class="main-section">
+    <ListName v-if="name === ''" />
     <AddItem />
     <EmptyList v-if="items.length === 0" />
     <div v-else>
