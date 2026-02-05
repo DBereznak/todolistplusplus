@@ -18,3 +18,13 @@ defineProps<{
     <priority-drop-down :id="id" />
   </li>
 </template>
+
+<style scoped>
+li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+</style>

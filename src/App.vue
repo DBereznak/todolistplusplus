@@ -10,7 +10,7 @@ const name = ref('')
 
 onMounted(() => {
   items.value = JSON.parse(localStorage.getItem('todo-items') || '[]')
-  name.value = JSON.parse(localStorage.getItem('list-name') || '{"listName":""}').name || ''
+  name.value = JSON.parse(localStorage.getItem('list-name') || '')
 })
 
 provide('items', items)
@@ -22,7 +22,7 @@ provide('name', name)
     <h1>ToDo List ++</h1>
   </header>
   <section class="main-section">
-    <ListName v-if="name === ''" />
+    <ListName />
     <AddItem />
     <EmptyList v-if="items.length === 0" />
     <div v-else>
@@ -37,7 +37,7 @@ provide('name', name)
 
 body {
   font-family: 'Inter', 'Proza Libre', sans-serif;
-  background-color: #eef2f7;
+  background-color: #bfc9d1;
   margin: 0;
   padding: 0;
 }
@@ -46,9 +46,9 @@ body {
   max-width: 80%;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 2px solid #25343f;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: #eaefef;
 }
 
 header {
@@ -56,7 +56,7 @@ header {
   margin-bottom: 20px;
   h1 {
     font-size: 2.5em;
-    color: #333;
+    color: #ff9b51;
   }
 }
 </style>

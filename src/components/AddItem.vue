@@ -18,6 +18,7 @@ const addItem = () => {
       description: newDescriptionText.value.trim(),
     })
     newItemText.value = ''
+    newDescriptionText.value = ''
   } else {
     alert('Item text cannot be empty.')
   }
