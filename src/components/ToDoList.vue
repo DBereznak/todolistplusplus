@@ -8,12 +8,10 @@ const items = inject('items') as Ref<Array<List>>
   <div class="todo-list">
     <ul>
       <ListItem v-for="item in items" :key="item.id" :id="item.id">
-        <div>
+        <h2>
           {{ item.text }}
-        </div>
-        <div>Created On : {{ item.createdOn }}</div>
-        <div>Status: {{ item.status }}</div>
-        <div>Priority: {{ item.priority }}</div>
+        </h2>
+        <p>Created On : {{ item.createdOn }}</p>
       </ListItem>
     </ul>
   </div>
@@ -23,5 +21,11 @@ const items = inject('items') as Ref<Array<List>>
 ul {
   list-style-type: none;
   padding: 0;
+}
+
+p {
+  margin: 5px 0;
+  color: #25343f;
+  font-size: 1em;
 }
 </style>

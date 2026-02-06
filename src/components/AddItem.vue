@@ -29,15 +29,22 @@ const addItem = () => {
 <template>
   <div>
     <h2>Add New Item</h2>
-    <input type="text" placeholder="New item" v-model="newItemText" />
-    <br />
-    <br />
+    <input type="text" name="new-item" placeholder="New item" v-model="newItemText" />
     <textarea
+      name="description"
+      rows="4"
       v-model="newDescriptionText"
       placeholder="Add notes or a description here if you want."
     ></textarea>
-    <br />
-
     <button @click="addItem()">Add</button>
   </div>
 </template>
+
+<style scoped>
+div {
+  margin-bottom: 20px;
+  display: grid;
+  width: 50%;
+  gap: 10px;
+}
+</style>

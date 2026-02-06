@@ -24,9 +24,13 @@ const toggleEditDescription = () => {
 </script>
 
 <template>
-  <button v-show="description" @click="toggleEditDescription()">Edit Description</button>
-  <textarea v-if="edit" v-model="description"></textarea>
-  <p v-else>{{ description }}</p>
+  <div>
+    <textarea v-if="edit" v-model="description"></textarea>
+    <p v-else>{{ description }}</p>
+    <button v-show="description" @click="toggleEditDescription()">
+      {{ edit ? 'Save' : 'Edit' }} Description
+    </button>
+  </div>
 </template>
 
 <style scoped></style>

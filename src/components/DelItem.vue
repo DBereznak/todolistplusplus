@@ -14,5 +14,5 @@ const delItem = (id: number) => {
 </script>
 
 <template>
-  <button @click="delItem(id)">Delete {{ id }}</button>
+  <button @click="delItem(id)">Delete</button>
 </template>

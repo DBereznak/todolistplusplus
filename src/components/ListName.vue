@@ -39,26 +39,4 @@ const saveListName = () => {
   gap: 10px;
   margin-bottom: 20px;
 }
-.list-name h1 {
-  font-size: 2em;
-  color: #25343f;
-}
-.list-name input {
-  font-size: 1.5em;
-  padding: 5px;
-  border: 2px solid #25343f;
-  border-radius: 4px;
-}
-.list-name button {
-  padding: 5px 10px;
-  font-size: 1em;
-  background-color: #ff9b51;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.list-name button:hover {
-  background-color: #e68a3c;
-}
 </style>

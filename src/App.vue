@@ -59,4 +59,58 @@ header {
     color: #ff9b51;
   }
 }
+
+input,
+textarea {
+  color: #25343f;
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #25343f;
+  border-radius: 5px;
+  font-size: 1em;
+}
+button {
+  background-color: #ff9b51;
+  font-size: 1em;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  max-width: 200px;
+}
+button:hover {
+  background-color: #e68a3c;
+}
+
+h1 {
+  font-size: 2em;
+  color: #25343f;
+}
+
+select {
+  color: #25343f;
+  padding: 5px;
+  border: 2px solid #25343f;
+  border-radius: 5px;
+  font-size: 1em;
+  margin: 20px;
+}
+
+label {
+  font-size: 1em;
+  font-weight: bold;
+  color: #25343f;
+}
+
+p {
+  font-size: 1.2em;
+  color: #25343f;
+}
+
+h2 {
+  color: #25343f;
+  margin: 0;
+}
 </style>

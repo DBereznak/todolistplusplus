@@ -17,9 +17,12 @@ const updateStatus = () => {
 </script>
 
 <template>
-  <select v-model="status" @change="updateStatus()">
-    <option value="pending">Pending</option>
-    <option value="in-progress">In Progress</option>
-    <option value="completed">Completed</option>
-  </select>
+  <div>
+    <label for="status">Status:</label>
+    <select name="status" v-model="status" @change="updateStatus()">
+      <option value="pending">Pending</option>
+      <option value="in-progress">In Progress</option>
+      <option value="completed">Completed</option>
+    </select>
+  </div>
 </template>

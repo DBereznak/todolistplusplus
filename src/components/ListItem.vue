@@ -13,18 +13,22 @@ defineProps<{
     <slot></slot>
     <edit-description :id="id" />
     <br />
-    <del-item :id="id" />
     <status-drop-down :id="id" />
     <priority-drop-down :id="id" />
+    <del-item :id="id" />
   </li>
 </template>
 
 <style scoped>
 li {
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 5px;
   padding: 15px;
   margin-bottom: 10px;
+  display: grid;
+}
+li:hover {
+  border: 2px solid #ff9b51;
 }
 </style>

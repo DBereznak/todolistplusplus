@@ -17,10 +17,13 @@ const updatePriority = () => {
 </script>
 
 <template>
-  <select v-model="priority" @change="updatePriority()">
-    <option value="low">Low</option>
-    <option value="normal">Normal</option>
-    <option value="high">High</option>
-    <option value="urgent">Urgent</option>
-  </select>
+  <div>
+    <label for="priority">Priority:</label>
+    <select name="priority" v-model="priority" @change="updatePriority()">
+      <option value="low">Low</option>
+      <option value="normal">Normal</option>
+      <option value="high">High</option>
+      <option value="urgent">Urgent</option>
+    </select>
+  </div>
 </template>
