@@ -9,6 +9,9 @@ const items = inject('items') as Ref<Array<List>>
 const delItem = (id: number) => {
   const i = items.value.findIndex((item) => item.id === id)
   items.value.splice(i, 1)
+  if (items.value.length === 0) {
+    localStorage.removeItem('todo-items')
+  }
   console.log('item deleted')
 }
 </script>

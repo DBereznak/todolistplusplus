@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 import { ref, inject, type Ref } from 'vue'
+import ErrorDialog from './ErrorDialog.vue'
 import type { List } from '@/types'
 import { Priority, Status } from '@/types'
 const items = inject('items') as Ref<Array<List>>
 const newItemText = ref('')
 const newDescriptionText = ref('')
+const showDialog = ref(false)
 const addItem = () => {
   const date = new Date().toLocaleDateString()
   if (newItemText.value.trim() !== '') {
@@ -20,7 +22,7 @@ const addItem = () => {
     newItemText.value = ''
     newDescriptionText.value = ''
   } else {
-    alert('Item text cannot be empty.')
+    showDialog.value = true
   }
   console.log('Add item:', newItemText.value)
 }
@@ -37,6 +39,7 @@ const addItem = () => {
       placeholder="Add notes or a description here if you want."
     ></textarea>
     <button @click="addItem()">Add</button>
+    <ErrorDialog v-if="showDialog" @close="showDialog = false" message="New Item input required." />
   </div>
 </template>
 
