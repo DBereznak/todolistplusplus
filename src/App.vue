@@ -20,6 +20,7 @@ provide('name', name)
 <template>
   <header>
     <h1>ToDo List ++</h1>
+    <h3>Its a todo app plus so much more</h3>
   </header>
   <section class="main-section">
     <ListName />
@@ -54,12 +55,16 @@ body {
 header {
   text-align: center;
   margin-bottom: 20px;
-  h1 {
-    font-size: 2.5em;
-    color: #ff9b51;
-  }
 }
 
+header h1 {
+  font-size: 2.5em;
+  color: #25343f;
+}
+header h3 {
+  font-size: 1.2em;
+  color: #25343f;
+}
 input,
 textarea {
   color: #25343f;
