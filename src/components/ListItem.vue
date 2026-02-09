@@ -2,7 +2,7 @@
 import DelItem from './DelItem.vue'
 import StatusDropDown from './StatusDropDown.vue'
 import PriorityDropDown from './PriorityDropDown.vue'
-import EditDescription from './EditDescription.vue'
+import EditNotes from './EditNotes.vue'
 defineProps<{
   id: number
 }>()
@@ -11,7 +11,7 @@ defineProps<{
 <template>
   <li>
     <slot></slot>
-    <edit-description :id="id" />
+    <edit-notes :id="id" />
     <br />
     <status-drop-down :id="id" />
     <priority-drop-down :id="id" />

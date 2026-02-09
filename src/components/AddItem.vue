@@ -5,7 +5,7 @@ import type { List } from '@/types'
 import { Priority, Status } from '@/types'
 const items = inject('items') as Ref<Array<List>>
 const newItemText = ref('')
-const newDescriptionText = ref('')
+const newNotesText = ref('')
 const showDialog = ref(false)
 const addItem = () => {
   const date = new Date().toLocaleDateString()
@@ -17,10 +17,10 @@ const addItem = () => {
       createdOn: date,
       status: Status.Pending,
       priority: Priority.Normal,
-      description: newDescriptionText.value.trim(),
+      notes: newNotesText.value.trim(),
     })
     newItemText.value = ''
-    newDescriptionText.value = ''
+    newNotesText.value = ''
   } else {
     showDialog.value = true
   }
@@ -35,8 +35,8 @@ const addItem = () => {
     <textarea
       name="description"
       rows="4"
-      v-model="newDescriptionText"
-      placeholder="Add notes or a description here if you want."
+      v-model="newNotesText"
+      placeholder="Add notes here if you want."
     ></textarea>
     <button @click="addItem()">Add</button>
     <ErrorDialog v-if="showDialog" @close="showDialog = false" message="New Item input required." />

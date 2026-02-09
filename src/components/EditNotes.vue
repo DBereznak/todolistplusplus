@@ -7,29 +7,28 @@ const props = defineProps<{
 }>()
 const items = inject('items') as Ref<Array<List>>
 const item = items.value.find((item) => item.id === props.id)
-const description = computed({
+const notes = computed({
   get: () => {
-    return item?.description || ''
+    return item?.notes || ''
   },
   set: (value) => {
     if (item) {
-      item.description = value
+      item.notes = value
     }
   },
 })
-const toggleEditDescription = () => {
+const toggleEditNotes = () => {
   edit.value = !edit.value
-  console.log(`Edit description mode for item ${props.id}: ${edit.value}`)
 }
 </script>
 
 <template>
   <div>
-    <textarea v-if="edit" v-model="description"></textarea>
-    <p v-else>{{ description }}</p>
-    <button v-show="description" @click="toggleEditDescription()">
-      {{ edit ? 'Save' : 'Edit' }} Description
-    </button>
+    <textarea v-if="edit" v-model="notes"></textarea>
+    <p v-else>{{ notes }}</p>
+    <br />
+    <button v-if="notes === ''" @click="toggleEditNotes()">Add Notes</button>
+    <button v-else @click="toggleEditNotes()">{{ edit ? 'Save' : 'Edit' }} Notes</button>
   </div>
 </template>
 

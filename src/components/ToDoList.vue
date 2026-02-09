@@ -12,6 +12,7 @@ const items = inject('items') as Ref<Array<List>>
           {{ item.text }}
         </h2>
         <p>Created On : {{ item.createdOn }}</p>
+        <p v-show="item.completedOn">Completed On : {{ item.completedOn }}</p>
       </ListItem>
     </ul>
   </div>

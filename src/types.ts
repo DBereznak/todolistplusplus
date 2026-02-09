@@ -2,9 +2,10 @@ export type List = {
   id: number
   text: string
   createdOn: string
+  completedOn?: string
   status: Status
   priority: Priority
-  description?: string
+  notes?: string
 }
 
 export enum Status {
