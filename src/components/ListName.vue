@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref, inject, type Ref, computed } from 'vue'
+import { Pen, PenOff } from 'lucide-vue-next'
 const name = inject('name') as Ref<string>
 const listName = computed({
   get: () => {
@@ -28,7 +29,10 @@ const saveListName = () => {
       v-model="listName"
       v-if="editName"
     />
-    <button @click="saveListName()">{{ listName ? 'Edit' : 'Add' }} Name</button>
+    <button @click="saveListName()">
+      <PenOff v-if="editName" color="#fff" />
+      <Pen v-else color="#fff" />
+    </button>
   </div>
 </template>
 

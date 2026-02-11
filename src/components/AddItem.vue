@@ -11,7 +11,7 @@ const addItem = () => {
   const date = new Date().toLocaleDateString()
   if (newItemText.value.trim() !== '') {
     const newId = items.value.length ? Math.max(...items.value.map((item) => item.id)) + 1 : 1
-    items.value.push({
+    items.value.unshift({
       id: newId,
       text: newItemText.value.trim(),
       createdOn: date,

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { inject, type Ref, computed, ref } from 'vue'
+import { Pen, PenOff } from 'lucide-vue-next'
 import type { List } from '@/types'
 const edit = ref(false)
 const props = defineProps<{
@@ -28,7 +29,10 @@ const toggleEditNotes = () => {
     <p v-else>{{ notes }}</p>
     <br />
     <button v-if="notes === ''" @click="toggleEditNotes()">Add Notes</button>
-    <button v-else @click="toggleEditNotes()">{{ edit ? 'Save' : 'Edit' }} Notes</button>
+    <button v-else @click="toggleEditNotes()">
+      <penOff v-if="edit" color="#fff" />
+      <pen v-else color="#fff" />
+    </button>
   </div>
 </template>
 
