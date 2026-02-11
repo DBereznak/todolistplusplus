@@ -11,7 +11,7 @@
 - ~~- Add **Date of Creation**~~
 - ~~Add an **Editable Description** // added description will make it editable later~~
 - ~~- Add **Item Status** (e.g., pending, in‑progress, completed)~~
-- Add sorting
+- ~~Add sorting ~~ Its drag sorting
 - ~~sort completed items to bottom of list~~
 
 ## dependancies

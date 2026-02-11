@@ -9,18 +9,18 @@ defineProps<{
 </script>
 
 <template>
-  <li>
+  <div class="item">
     <slot></slot>
     <edit-notes :id="id" />
     <br />
     <status-drop-down :id="id" />
     <priority-drop-down :id="id" />
     <del-item :id="id" />
-  </li>
+  </div>
 </template>
 
 <style scoped>
-li {
+.item {
   background-color: #fff;
   border: 2px solid #ddd;
   border-radius: 5px;
@@ -28,7 +28,7 @@ li {
   margin-bottom: 10px;
   display: grid;
 }
-li:hover {
+.item:hover {
   border: 2px solid #ff9b51;
 }
 </style>
