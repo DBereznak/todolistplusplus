@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
+import { ChevronUp } from 'lucide-vue-next'
 import DelItem from './DelItem.vue'
 import StatusDropDown from './StatusDropDown.vue'
 import PriorityDropDown from './PriorityDropDown.vue'
@@ -6,13 +8,22 @@ import EditNotes from './EditNotes.vue'
 defineProps<{
   id: number
 }>()
+const itemHeight = ref('auto')
+const collapseItem = () => {
+  itemHeight.value = itemHeight.value === 'auto' ? '100px' : 'auto'
+}
 </script>
 
 <template>
-  <div class="item">
+  <div class="item" :style="{ height: itemHeight }">
+    <ChevronUp
+      color="#ff9b51"
+      class="chevron"
+      :class="{ up: itemHeight === '100px' }"
+      @click="collapseItem()"
+    />
     <slot></slot>
     <edit-notes :id="id" />
-    <br />
     <status-drop-down :id="id" />
     <priority-drop-down :id="id" />
     <del-item :id="id" />
@@ -27,8 +38,26 @@ defineProps<{
   padding: 15px;
   margin-bottom: 10px;
   display: grid;
+  overflow: hidden;
 }
 .item:hover {
   border: 2px solid #ff9b51;
+}
+
+.chevron {
+  position: absolute;
+  left: 50%;
+  padding: 5px;
+  transform: scale(1.5) rotate(0deg);
+  transition: transform 0.25s;
+  cursor: pointer;
+}
+
+.up {
+  transform: scale(1.5) rotate(180deg);
+}
+
+.chevron:hover {
+  opacity: 0.75;
 }
 </style>
