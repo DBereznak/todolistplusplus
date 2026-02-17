@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, inject, type Ref } from 'vue'
-import ErrorDialog from './ErrorDialog.vue'
+import AppDialog from './AppDialog.vue'
 import type { List } from '@/types'
 import { Priority, Status } from '@/types'
 const items = inject('items') as Ref<Array<List>>
@@ -39,7 +39,7 @@ const addItem = () => {
       placeholder="Add notes here if you want."
     ></textarea>
     <button @click="addItem()">Add</button>
-    <ErrorDialog v-if="showDialog" @close="showDialog = false" message="New Item input required." />
+    <AppDialog v-if="showDialog" @close="showDialog = false" message="New Item input required." />
   </div>
 </template>
 
